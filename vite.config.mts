@@ -10,4 +10,9 @@ export default defineConfig({
 		restoreMocks: true,
 	},
 	plugins: [tsconfigPaths()],
+	ssr: {
+		// Prevents 'my-linked-dep' and 'another-library' from being externalized,
+		// so they will be bundled.
+		noExternal: ["zod"],
+	},
 });
