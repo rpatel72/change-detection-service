@@ -1,7 +1,7 @@
 import { StatusCodes } from "http-status-codes";
 import type { Mock } from "vitest";
 
-import type { User } from "@/api/user/userModel";
+import type { Watch } from "@/api/user/userModel";
 import { UserRepository } from "@/api/user/userRepository";
 import { UserService } from "@/api/user/userService";
 
@@ -11,7 +11,7 @@ describe("userService", () => {
 	let userServiceInstance: UserService;
 	let userRepositoryInstance: UserRepository;
 
-	const mockUsers: User[] = [
+	const mockUsers: Watch[] = [
 		{
 			id: 1,
 			name: "Alice",

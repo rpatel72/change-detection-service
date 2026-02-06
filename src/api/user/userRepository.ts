@@ -1,6 +1,6 @@
-import type { User } from "@/api/user/userModel";
+import type { Watch } from "@/api/user/userModel";
 
-export const users: User[] = [
+export const users: Watch[] = [
 	{
 		id: 1,
 		name: "Alice",
@@ -20,11 +20,11 @@ export const users: User[] = [
 ];
 
 export class UserRepository {
-	async findAllAsync(): Promise<User[]> {
+	async findAllAsync(): Promise<Watch[]> {
 		return users;
 	}
 
-	async findByIdAsync(id: number): Promise<User | null> {
+	async findByIdAsync(id: number): Promise<Watch | null> {
 		return users.find((user) => user.id === id) || null;
 	}
 }
